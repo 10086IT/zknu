@@ -1,0 +1,51 @@
+@import '~antd/dist/antd.css';
+body, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, th, td, p, blockquote, pre, form, fieldset, legend, input, button, textarea, hr {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  border-radius: 0;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FAFAFA;
+  font-family: -apple-system, PingFang SC, Helvetica Neue, STHeiti, Microsoft Yahei, Tahoma, Simsun, sans-serif;
+}
+
+#root {
+  margin: 0 auto;
+  max-width: 768px;
+  min-height: 100vh;
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+  background: white;
+}

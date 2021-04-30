@@ -1,0 +1,58 @@
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    line-height: 60px;
+    background: linear-gradient(to right, #00d8ff, #00a8ff);
+    font-size: 28px;
+    color: white;
+}
+
+.header-select {
+    width: 60px;
+    height: 60px;
+    background: url(../../imgs/base/select.png) no-repeat center/32px;
+}
+
+.lists {
+    display: flex;
+    height: 75px;
+    padding: 10px 20px 0;
+}
+
+.item-left {
+    width: 60px;
+    height: 60px;
+    background: url(../../imgs/base/head1.png) no-repeat;
+    background-size: cover;
+    border-radius: 3px;
+}
+
+.item-right-box {
+    margin-left: 10px;
+    flex: 1;
+    border-bottom: 1px solid #dedede;
+}
+
+.item-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    line-height: 16px;
+    color: #666666;
+}
+
+.item-job {
+    line-height: 25px;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.item-nums {
+    font-size: 12px;
+}
+
+.item-name {
+    font-size: 16px;
+}

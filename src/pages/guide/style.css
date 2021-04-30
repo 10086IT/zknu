@@ -1,0 +1,61 @@
+.guide-page {
+    min-height: 100vh;
+    animation: colorModify 2s ease-in;
+    background: wheat;
+}
+
+.iden {
+    padding-top: 200px;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+    color: salmon;
+    animation: movefont 2s ease-in;
+}
+
+.main {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.img-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    cursor: pointer;
+}
+
+.bottom-hint {
+    max-width: 768px;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+    color: rgb(248, 66, 46);
+    text-align: center;
+}
+
+.imgs {
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    margin-bottom: 5px;
+}
+
+.teacher {
+    background: url(../../imgs/base/jiaoshi.png) no-repeat;
+}
+
+.student {
+    background: url(../../imgs/base/xueshengzheng2x.png) no-repeat;
+}
+
+.admin {
+    background: url(../../imgs/base/guanliyuanbidu.png) no-repeat;
+}
