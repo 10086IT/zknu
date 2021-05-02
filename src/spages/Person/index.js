@@ -7,7 +7,11 @@ class Person extends Component {
   }
   render() {
     return (
-      <div>person
+      <div className="owner-page">
+        <div className="owner-title"></div>
+        <div className=""></div>
+        <div className=""></div>
+        <div className=""></div>
         <TabBar />
       </div>
     );

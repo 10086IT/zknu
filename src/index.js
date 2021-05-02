@@ -10,7 +10,7 @@ import NoMatch from './spages/NoMatch'
 import Login from './pages/login';
 import Guide from './pages/guide';
 import Details from './spages/details';
-
+import Discovery from './spages/discovery'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,8 +20,9 @@ ReactDOM.render(
         <Route exact path="/login" component={Login}></Route>
         <Route exact path="/index" component={Home}></Route>
         <Route exact path="/details" component={Details} ></Route>
+        <Route exact path="/discovery" component={Discovery}></Route>
         <Route exact path="/msg" component={Msg}></Route>
-        <Route exact path="/person" component={Person}></Route>
+        <Route exact path="/owner" component={Person}></Route>
         <Route path="*" component={NoMatch}></Route>
       </Switch>
     </BrowserRouter>

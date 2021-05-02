@@ -1,0 +1,111 @@
+.pic-img {
+    width: 100px;
+    height: 100px;
+    background: url(../../imgs//base/img.png) no-repeat center/40px;
+    background-size: cover;
+}
+
+.discovery-pages {
+    padding-bottom: 20vh;
+}
+
+.discovery-search-header {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    line-height: 60px;
+    background: linear-gradient(to right, #fb602d, #fc845d);
+    font-size: 16px;
+    color: white;
+    white-space: nowrap;
+}
+
+.discovery-header-search {
+    margin-left: 10px;
+    display: flex;
+    width: 70%;
+    align-items: center;
+    height: 40px;
+}
+
+.discovery-user-search {
+    margin-left: 13px;
+    color: #fc845d;
+    padding-left: 10px;
+    flex: 1;
+    height: 40px;
+    line-height: 16px;
+    border: none;
+    border-radius: 15px;
+}
+
+.integral-box {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #f18d68;
+}
+
+.integral {
+    position: relative;
+    line-height: 42px;
+    padding: 0 12px;
+    font-size: 18px;
+    font-weight: 400;
+    color: ghostwhite;
+}
+
+.integral-click::after {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    content: '';
+    opacity: 0.9;
+    width: 100%;
+    height: 3px;
+    background: gold;
+}
+
+.submit {
+    line-height: 40px;
+    padding: 0 20px;
+    margin-left: 10px;
+    background-color: #fb602d;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.item-integral {
+    display: flex;
+    margin: 20px 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid #cccccc;
+}
+
+.integral-at {
+    width: 60px;
+    height: 60px;
+    background: url(../../imgs/base/img1.png) no-repeat;
+    background-size: cover;
+    font-weight: 800;
+    font-size: 25px;
+    color: #f35309;
+    text-align: center;
+}
+
+.integral-left {
+    display: flex;
+}
+
+.integral-box-msg {
+    padding-left: 15px;
+}
+
+.integral-pic {
+    width: 70px;
+    height: 70px;
+    background: url(../../imgs/base/head2.png) no-repeat center/70px;
+    border-radius: 50%;
+}
