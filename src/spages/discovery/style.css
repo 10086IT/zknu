@@ -55,6 +55,10 @@
     color: ghostwhite;
 }
 
+.integral-click {
+    color: gold;
+}
+
 .integral-click::after {
     position: absolute;
     left: 0;
@@ -108,4 +112,16 @@
     height: 70px;
     background: url(../../imgs/base/head2.png) no-repeat center/70px;
     border-radius: 50%;
+}
+
+.list-more {
+    margin: 0 auto;
+    border-radius: 5px;
+    line-height: 40px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    word-spacing: 5px;
+    font-size: 22px;
+    background-color: #096dd9;
+    color: white;
 }

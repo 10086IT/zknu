@@ -12,6 +12,12 @@ const request = (method = 'get') => ({
     }).then((res) => {
         let { status: resStatus, data: resData = {} } = res
         if (resStatus === 200) {
+            const { url } = resData
+
+            if (url === 'http://localhost:3000/owner') {
+                window.location.href = url
+                throw (res)
+            }
             return resData
         }
     }

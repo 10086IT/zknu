@@ -1,0 +1,80 @@
+.owner-page {
+    background-color: rgb(240, 233, 233);
+    padding-bottom: 30vh;
+}
+
+.owner-head {
+    display: flex;
+    padding-left: 15px;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 5px solid aliceblue;
+}
+
+.pic-owner-head {
+    width: 80px;
+    height: 80px;
+    background: url(../../imgs/base/pic_header.png) no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.owner-head-right {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15px;
+    height: 100px;
+}
+
+.owner-head-right-msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.owner-account {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(17, 12, 12);
+}
+
+.owner-name {
+    font-size: 22px;
+}
+
+.modify-owner-msg {
+    padding-right: 36px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.owner-msg {
+    position: relative;
+    margin-bottom: 22px;
+    padding-left: 25px;
+    line-height: 40px;
+    font-weight: 400;
+    color: black;
+    font-size: 18px;
+}
+
+.owner-msg::after {
+    position: absolute;
+    right: 36px;
+    content: '>';
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.owner-msg-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    line-height: 40px;
+    font-weight: 400;
+    color: black;
+    font-size: 18px;
+}

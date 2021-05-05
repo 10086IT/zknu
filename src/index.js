@@ -11,14 +11,19 @@ import Login from './pages/login';
 import Guide from './pages/guide';
 import Details from './spages/details';
 import Discovery from './spages/discovery'
-
+import Loadable from 'react-loadable'
+import Loading from './components/loading'
+const Load_home = Loadable({
+  loader: () => import('./spages/Home/index'),
+  loading: Loading
+})
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Guide}></Route>
+        <Route exact path="/index" component={Load_home}></Route>
         <Route exact path="/login" component={Login}></Route>
-        <Route exact path="/index" component={Home}></Route>
         <Route exact path="/details" component={Details} ></Route>
         <Route exact path="/discovery" component={Discovery}></Route>
         <Route exact path="/msg" component={Msg}></Route>
@@ -29,6 +34,9 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+if (module.hot) {
+  module.hot.accept()
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
