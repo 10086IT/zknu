@@ -6,9 +6,13 @@ class Title extends Component {
     this.state = { title: '' }
   }
   goLastPage = () => {
+    const { url } = this.props
+    if (url) {
+      localStorage.removeItem('iden')
+      window.location.href = url
+      return
+    }
     window.history.go(-1)
-    localStorage.removeItem('iden')
-    console.log('1')
   }
   render() {
     const { title, isShowBack = false } = this.props

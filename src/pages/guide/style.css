@@ -1,7 +1,8 @@
 .guide-page {
     min-height: 100vh;
     animation: colorModify 2s ease-in;
-    background: wheat;
+    color: white;
+    background-color: teal;
 }
 
 .iden {
@@ -9,7 +10,6 @@
     font-size: 22px;
     text-align: center;
     font-weight: 600;
-    color: salmon;
     animation: movefont 2s ease-in;
 }
 
@@ -37,7 +37,6 @@
     position: absolute;
     bottom: 10px;
     font-size: 14px;
-    color: rgb(248, 66, 46);
     text-align: center;
 }
 

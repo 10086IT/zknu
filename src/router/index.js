@@ -1,10 +1,35 @@
-import Loadable from 'react-loadable';
-import Loading from '../components/loading/index';
+import React from 'react';
+import { Route, Switch, BrowserRouter } from "react-router-dom";
+import Home from '../spages/Home'
+import Person from '../spages/Person'
+import Msg from '../spages/msg'
+import NoMatch from '../spages/NoMatch'
+import Login from '../pages/login';
+import Guide from '../pages/guide';
+import Details from '../spages/details';
+import Discovery from '../spages/discovery'
+import { Fragment } from 'react';
 
-export default function MyLoadable(opts) {
-  return Loadable(Object.assign({
-    loading: Loading,
-    delay: 200,
-    timeout: 10000,
-  }, opts));
-};
+
+export default class MyRouter extends React.Component {
+  render() {
+    return (
+      <Fragment>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={Guide}></Route>
+            <Route exact path="/index" component={Home}></Route>
+            <Route exact path="/login" component={Login}></Route>
+            <Route exact path="/details" component={Details} ></Route>
+            <Route exact path="/discovery" component={Discovery}></Route>
+            <Route exact path="/msg" component={Msg}></Route>
+            <Route exact path="/owner" component={Person}></Route>
+            <Route path="*" component={NoMatch}></Route>
+          </Switch>
+        </BrowserRouter>
+      </Fragment>
+    )
+
+  }
+}
+

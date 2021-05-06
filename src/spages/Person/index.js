@@ -1,12 +1,27 @@
 import React, { Component } from 'react';
 import TabBar from '../../components/tabbar';
 import './style.css'
+import { ownerMsg } from '../../net/api'
+
+
+
 class Person extends Component {
   constructor(props) {
     super(props);
     this.state = {}
   }
+  async componentDidMount() {
+    await this.loadData()
+  }
+  loadData = async () => {
+    await ownerMsg({}).then((res) => {
+
+    }).catch((e) => {
+
+    })
+  }
   render() {
+    const { name, account, phone, sex, birth, } = this.state
     return (
       <div className="owner-page">
         <div className="home-header">
@@ -20,30 +35,25 @@ class Person extends Component {
           <div className="owner-head-right" >
             <div className="owner-head-right-msg">
               <div className="owner-name">
-                <strong>李白</strong>
+                <strong>{name}</strong>
               </div>
-              <div className="owner-account">学号：202116369689</div>
+              <div className="owner-account">学号：{account}</div>
             </div>
             <div className="modify-owner-msg">&gt;</div>
           </div>
         </div>
         <div className="owner-msg-box">
           <div className="owner-msg-txt">手机号</div>
-          <div className="owner-msg-detail">1833696336</div>
+          <div className="owner-msg-detail">{phone}</div>
         </div>
         <div className="owner-msg-box">
           <div className="owner-msg-txt">性别</div>
-          <div className="owner-msg-detail">男</div>
+          <div className="owner-msg-detail">{sex}</div>
         </div>
         <div className="owner-msg-box">
           <div className="owner-msg-txt">生日</div>
-          <div className="owner-msg-detail">2020-02-01</div>
+          <div className="owner-msg-detail">{birth}</div>
         </div>
-        <div className="owner-msg-box">
-          <div className="owner-msg-txt">手机号</div>
-          <div className="owner-msg-detail">1833696336</div>
-        </div>
-
         <div className="owner-msg">历史任务</div>
         <div className="owner-msg">当前任务</div>
         <div className="owner-msg">隐私与安全</div>

@@ -1,5 +1,5 @@
 .login {
-  padding: 0px 30px;
+  padding: 0px 40px;
 }
 
 .form-wrap {
@@ -26,6 +26,11 @@
 
 .input-wrap {
   flex: 1;
+}
+
+input::placeholder {
+  color: #ccc;
+  font-size: 14px;
 }
 
 .input-self {

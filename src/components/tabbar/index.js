@@ -26,10 +26,10 @@ class TabBar extends Component {
     return (
       <Fragment>
         <div className="tabs">
-          <div className="tab" onClick={this.pathTo.bind(this, "/")}><img src={HomeImg} alt="首页" />首页 </div>
+          <div className="tab" onClick={this.pathTo.bind(this, "/index")}><img src={HomeImg} alt="首页" />首页 </div>
           <div className="tab" onClick={this.pathTo.bind(this, "/discovery")}><img src={DiscoverImg} alt="发现" /> 发现</div>
           <div className="tab" onClick={this.pathTo.bind(this, "/msg")}><img src={MsgImg} alt="消息" /> 消息</div>
-          <div className="tab" onClick={this.pathTo.bind(this, "/person")}><img src={PersonImg} alt="我的" /> 我的</div>
+          <div className="tab" onClick={this.pathTo.bind(this, "/owner")}><img src={PersonImg} alt="我的" /> 我的</div>
         </div>
       </Fragment>
     );

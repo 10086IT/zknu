@@ -1,6 +1,6 @@
 import axios from 'axios'
 axios.defaults.timeout = 5000
-
+axios.defaults.withCredentials = true
 const request = (method = 'get') => ({
     url,
     data
@@ -9,20 +9,27 @@ const request = (method = 'get') => ({
         url,
         data,
         method,
+        withCredentials: true,
+        headers: {
+            token: localStorage.getItem('token')
+        }
+
     }).then((res) => {
         let { status: resStatus, data: resData = {} } = res
         if (resStatus === 200) {
-            const { url } = resData
-
-            if (url === 'http://localhost:3000/owner') {
-                window.location.href = url
-                throw (res)
+            const { code, msg } = resData
+            if (code == -100) {
+                throw (resData)
+                window.location.href = "http://localhost:3000/login"
+                return
             }
-            return resData
+            else {
+                return resData
+            }
         }
     }
     ).catch((e) => {
-        console.log(e)
+        throw (e)
     })
 }
 export const post = request('post')

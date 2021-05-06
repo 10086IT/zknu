@@ -3,8 +3,7 @@ import Title from '../../components/Title';
 import './style.css'
 import { message } from 'antd'
 import { login } from '../../net/api'
-
-
+import cookie from 'react-cookies'
 //数字
 const ACCOUNT_PATTERN = /^[0-9]*$/
 
@@ -16,6 +15,7 @@ class Login extends Component {
       pwd: ''
     }
   }
+
   componentDidMount() {
     let account = localStorage.getItem('account')
     let pwd = localStorage.getItem('pwd')
@@ -43,16 +43,21 @@ class Login extends Component {
     const data = {
       iden, account, pwd
     }
-    console.log(data)
+    //登录
     await login(data).then((res) => {
-      console.log(res)
-    }).catch((e) => {
-      message.success(e)
+      const { code, userId } = res
+      localStorage.setItem('token', userId)
+      message.success('登录成功')
+      setTimeout(function () {
+        window.location.href = "http://localhost:3000/index"
+      }, 2000)
+    }
+    ).catch((e) => {
+      message.warning(e.msg)
     })
   }
-  submitData = () => {
+  submitData = async () => {
     const { account, pwd } = this.state
-
     if (account.length < 6) {
       message.warning('账号错误')
       return
@@ -70,7 +75,7 @@ class Login extends Component {
     const { account, pwd } = this.state
     return (
       <Fragment>
-        <Title title={'登录'} isShowBack={true} />
+        <Title title={'登录'} isShowBack={true} url={'http://localhost:3000'} />
         <div className="login">
           <div className='form-wrap account'>
             <div className='input-title'>账号</div>

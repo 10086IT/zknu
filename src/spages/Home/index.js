@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TabBar from '../../components/tabbar';
 import './home.css'
-import Title from '../../components/Title';
 //兼职任务搜索列表
 const lists_jobs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 1, 1, 1, 1, 1]
 class Home extends Component {
@@ -14,7 +13,7 @@ class Home extends Component {
 
   }
   componentDidMount() {
-    const { userId } = this.state
+
     // if (userId === 0) {
     //   window.location.replace(`/login`)
     //   return
@@ -26,7 +25,7 @@ class Home extends Component {
   }
 
   render() {
-    const { userId } = this.state
+
     console.log(this.props)
     return (
       <div className="home">
