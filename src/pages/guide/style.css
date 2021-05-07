@@ -41,20 +41,20 @@
 }
 
 .imgs {
-    width: 32px;
-    height: 32px;
+    width: 60px;
+    height: 60px;
     background-size: cover;
     margin-bottom: 5px;
 }
 
 .teacher {
-    background: url(../../imgs/base/jiaoshi.png) no-repeat;
+    background: url(../../imgs/base/jiaoshi.png) no-repeat center;
 }
 
 .student {
-    background: url(../../imgs/base/xueshengzheng2x.png) no-repeat;
+    background: url(../../imgs/base/xueshengzheng2x.png) no-repeat center;
 }
 
 .admin {
-    background: url(../../imgs/base/guanliyuanbidu.png) no-repeat;
+    background: url(../../imgs/base/guanliyuanbidu.png) no-repeat center;
 }

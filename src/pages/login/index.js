@@ -3,7 +3,6 @@ import Title from '../../components/Title';
 import './style.css'
 import { message } from 'antd'
 import { login } from '../../net/api'
-import cookie from 'react-cookies'
 //数字
 const ACCOUNT_PATTERN = /^[0-9]*$/
 
@@ -17,6 +16,7 @@ class Login extends Component {
   }
 
   componentDidMount() {
+
     let account = localStorage.getItem('account')
     let pwd = localStorage.getItem('pwd')
     if (account) {
@@ -47,10 +47,11 @@ class Login extends Component {
     await login(data).then((res) => {
       const { code, userId } = res
       localStorage.setItem('token', userId)
+
       message.success('登录成功')
       setTimeout(function () {
         window.location.href = "http://localhost:3000/index"
-      }, 2000)
+      }, 1000)
     }
     ).catch((e) => {
       message.warning(e.msg)

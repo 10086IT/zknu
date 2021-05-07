@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Title from '../../components/Title'
+import { checklogin } from '../../net/api'
 import './style.css'
 class Details extends Component {
     constructor(props) {
@@ -7,6 +8,9 @@ class Details extends Component {
         this.state = {
             job_dos: "1、身体健康，做事认真，无传染病和犯罪记录\n2、年龄16- 30周岁，男女不限，无须经验\n3、持有本人有效身份证原件；\n 2、住宿条件：免费提供4 - 6人间，有空调，洗衣机，独立卫生间，免费宽带；\n3、生活设施：生活区设有平价超市、网吧、水果店、ATM、快递收发点、医务室等"
         }
+    }
+    componentDidMount() {
+        checklogin()
     }
     render() {
         return (

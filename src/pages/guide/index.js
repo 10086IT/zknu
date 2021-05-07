@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-
 import './style.css'
 //引导页//选择用户身份存储在本地
-//教师 0 学生 1 管理员 2
+
 
 
 class Guide extends Component {
@@ -16,16 +15,24 @@ class Guide extends Component {
     }
     loadIden = () => {
         let iden = localStorage.getItem('iden')
-        if (iden) {
-            window.location.href = 'http://localhost:3000/login'
+        let token = localStorage.getItem('token')
+
+        if (!iden) {
+            localStorage.removeItem('token')
             return
-        } else {
+        }
+
+        if (token && iden) {
+            if (!(window.location.pathname === '/index'))
+                window.location.replace('/index')
             return
         }
     }
     ChangeData = (value) => {
         localStorage.setItem('iden', value)
-        this.loadIden()
+        if (value) {
+            window.location.href = "http://localhost:3000/login"
+        }
     }
     render() {
         return (

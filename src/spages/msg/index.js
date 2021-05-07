@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-//系统通知
+import { checklogin } from '../../net/api'
 import TabBar from '../../components/tabbar';
+//系统通知
+
 class Msg extends Component {
   constructor(props) {
     super(props);
@@ -8,6 +10,9 @@ class Msg extends Component {
   }
   listener = () => {
 
+  }
+  componentDidMount() {
+    checklogin()
   }
   redi = () => {
   }

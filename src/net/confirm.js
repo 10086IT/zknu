@@ -15,6 +15,7 @@ const request = (method = 'get') => ({
         }
 
     }).then((res) => {
+        console.log(res)
         let { status: resStatus, data: resData = {} } = res
         if (resStatus === 200) {
             const { code, msg } = resData

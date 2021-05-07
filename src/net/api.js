@@ -18,3 +18,14 @@ export const login = ({ account, pwd, iden }) => post({
 export const ownerMsg = ({ }) => post({
   url: `${tp}/user?`,
 })
+export const checklogin = () => {
+  let iden = localStorage.getItem('iden')
+  let token = localStorage.getItem('token')
+
+  if (!iden || !token) {
+    localStorage.removeItem('token')
+    localStorage.removeItem('iden')
+    window.location.replace('/')
+    return
+  }
+}

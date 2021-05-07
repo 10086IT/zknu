@@ -9,9 +9,12 @@ import Guide from '../pages/guide';
 import Details from '../spages/details';
 import Discovery from '../spages/discovery'
 import { Fragment } from 'react';
-
+import MyLoadImg from '../components/uploadImg'
 
 export default class MyRouter extends React.Component {
+  componentDidMount() {
+
+  }
   render() {
     return (
       <Fragment>
@@ -23,6 +26,7 @@ export default class MyRouter extends React.Component {
             <Route exact path="/details" component={Details} ></Route>
             <Route exact path="/discovery" component={Discovery}></Route>
             <Route exact path="/msg" component={Msg}></Route>
+            <Route exact path="/uploadImg" component={MyLoadImg}></Route>
             <Route exact path="/owner" component={Person}></Route>
             <Route path="*" component={NoMatch}></Route>
           </Switch>

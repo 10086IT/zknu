@@ -2,22 +2,33 @@ import React, { Component } from 'react';
 import TabBar from '../../components/tabbar';
 import './style.css'
 import { ownerMsg } from '../../net/api'
+import { message } from 'antd';
+import { checklogin } from '../../net/api'
 
 
 
 class Person extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = ({
+      name: '', account: '', phone: '', sex: '', birth: '',
+    })
   }
   async componentDidMount() {
+    checklogin()
     await this.loadData()
   }
   loadData = async () => {
     await ownerMsg({}).then((res) => {
-
+      const { name, account, phone, sex, birth } = res
+      this.setState({
+        name, account, phone, sex, birth
+      })
     }).catch((e) => {
-
+      setTimeout(function () {
+        window.location.href = "http://localhost:3000"
+      })
+      message.warning('请重新登录')
     })
   }
   render() {
