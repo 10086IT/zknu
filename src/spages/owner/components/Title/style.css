@@ -1,0 +1,23 @@
+.b-header {
+  text-align: center;
+  padding-right: 40px;
+  background: linear-gradient(to right, #00d8ff, #00a8ff);
+  border-bottom: 1px solid rgb(204 204 204 / 17%);
+}
+
+.b-header-back {
+  float: left;
+  width: 40px;
+  height: 50px;
+  background: url(https://n1image.hjfile.cn/res7/2018/10/09/db40ea301b581ebb72cb86949a87be23.png) no-repeat;
+  background-size: 20px 20px;
+  background-position: 50%;
+}
+
+.b-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #2F3742;
+  font-family: -apple-system, PingFang SC, Helvetica Neue, STHeiti, Microsoft Yahei, Tahoma, Simsun, sans-serif;
+  line-height: 50px;
+}

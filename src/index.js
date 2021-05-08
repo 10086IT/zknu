@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'antd-mobile/dist/antd-mobile.css';
 import reportWebVitals from './reportWebVitals';
 
 import MyRouter from './router';

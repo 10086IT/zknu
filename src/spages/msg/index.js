@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { checklogin } from '../../net/api'
 import TabBar from '../../components/tabbar';
 //系统通知
 
@@ -8,18 +7,17 @@ class Msg extends Component {
     super(props);
     this.state = { data: '' }
   }
-  listener = () => {
+
+  componentDidMount() {
 
   }
-  componentDidMount() {
-    checklogin()
-  }
-  redi = () => {
-  }
+
   render() {
     return (
-      <div>{this.state.data}
-        <button onClick={this.redi}>啦啦啦</button>
+      <div>
+        <div className="home-header">
+          <div className="header-title">消息</div>
+        </div>
         <TabBar />
       </div>
     );

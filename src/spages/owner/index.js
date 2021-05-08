@@ -3,24 +3,31 @@ import TabBar from '../../components/tabbar';
 import './style.css'
 import { ownerMsg } from '../../net/api'
 import { message } from 'antd';
-import { checklogin } from '../../net/api'
 
 
 
-class Person extends Component {
+class Owner extends Component {
   constructor(props) {
     super(props);
     this.state = ({
       name: '', account: '', phone: '', sex: '', birth: '',
+      imgUrl: ''
     })
   }
   async componentDidMount() {
-    checklogin()
     await this.loadData()
   }
   loadData = async () => {
+    let imgUrl = localStorage.getItem('imgUrl')
+    if (imgUrl) {
+      this.setState({
+        imgUrl: imgUrl
+      })
+    }
     await ownerMsg({}).then((res) => {
-      const { name, account, phone, sex, birth } = res
+
+      const { data } = res
+      const { name, account, phone, sex, birth } = data
       this.setState({
         name, account, phone, sex, birth
       })
@@ -31,8 +38,14 @@ class Person extends Component {
       message.warning('请重新登录')
     })
   }
+  modifyImgheader = () => {
+    window.location.href = "http://localhost:3000/uploadImg"
+  }
+  toPagePhone = () => {
+    window.location.href = 'http://localhost:3000/modifyphone'
+  }
   render() {
-    const { name, account, phone, sex, birth, } = this.state
+    const { name, account, phone, sex, birth, imgUrl } = this.state
     return (
       <div className="owner-page">
         <div className="home-header">
@@ -41,9 +54,9 @@ class Person extends Component {
         </div>
         <div className="owner-head">
           <div className="owner-head-left">
-            <div className="pic-owner-head"></div>
+            <div className="pic-owner-head" style={{ background: `url(${imgUrl})` }}></div>
           </div>
-          <div className="owner-head-right" >
+          <div className="owner-head-right" onClick={this.modifyImgheader}>
             <div className="owner-head-right-msg">
               <div className="owner-name">
                 <strong>{name}</strong>
@@ -53,7 +66,7 @@ class Person extends Component {
             <div className="modify-owner-msg">&gt;</div>
           </div>
         </div>
-        <div className="owner-msg-box">
+        <div className="owner-msg-box" onClick={this.toPagePhone}>
           <div className="owner-msg-txt">手机号</div>
           <div className="owner-msg-detail">{phone}</div>
         </div>
@@ -78,4 +91,4 @@ class Person extends Component {
   }
 }
 
-export default Person;
+export default Owner;

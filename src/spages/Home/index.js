@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TabBar from '../../components/tabbar';
 import './home.css'
-import { checklogin } from '../../net/api'
 
 //兼职任务搜索列表
 const lists_jobs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 1, 1, 1, 1, 1]
@@ -14,8 +13,8 @@ class Home extends Component {
     }
 
   }
-  componentDidMount() {
-    checklogin()
+  async componentDidMount() {
+
   }
 
   nameChange = () => {
@@ -24,7 +23,7 @@ class Home extends Component {
 
   render() {
 
-    console.log(this.props)
+
     return (
       <div className="home">
         <div className="home-header">
@@ -46,7 +45,6 @@ class Home extends Component {
             )
 
           })}
-          <div className="s">s</div>
         </div>
         <TabBar />
       </div>

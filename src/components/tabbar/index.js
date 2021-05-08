@@ -13,8 +13,10 @@ class TabBar extends Component {
 
   }
   pathTo = (pathData, e) => {
-    if (window.location.pathname === pathData)
+    if (window.location.pathname === pathData) {
+      console.log('阻止默认')
       return
+    }
     else {
       window.location.replace(pathData)
       return
@@ -22,7 +24,7 @@ class TabBar extends Component {
   }
 
   render() {
-    console.log('阻止默认')
+
     return (
       <Fragment>
         <div className="tabs">

@@ -2,7 +2,6 @@ import React from 'react'
 import './style.css'
 import TabBar from '../../components/tabbar';
 import Integral from './components/integral'
-import { checklogin } from '../../net/api'
 
 //学生兼职任务详情
 
@@ -15,7 +14,7 @@ class Discovery extends React.Component {
 
     }
     componentDidMount() {
-        checklogin()
+
     }
     render() {
         return (

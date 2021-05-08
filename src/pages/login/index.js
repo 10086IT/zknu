@@ -15,17 +15,6 @@ class Login extends Component {
     }
   }
 
-  componentDidMount() {
-
-    let account = localStorage.getItem('account')
-    let pwd = localStorage.getItem('pwd')
-    if (account) {
-      this.setState({
-        account,
-        pwd
-      })
-    }
-  }
   formDataChange = (inputName, e) => {
     let value = e.target.value
     if (inputName === 'account' && !ACCOUNT_PATTERN.test(value)) {
@@ -40,14 +29,22 @@ class Login extends Component {
   confirm = async (account, pwd) => {
 
     let iden = localStorage.getItem('iden')
+    if (!iden) {
+      message.info('请重新选择身份')
+      setTimeout(function () {
+        window.location.href = "http://localhost:3000"
+      }, 1000)
+      return
+    }
     const data = {
       iden, account, pwd
     }
     //登录
     await login(data).then((res) => {
-      const { code, userId } = res
-      localStorage.setItem('token', userId)
+      const { data } = res
+      const { userId } = data
 
+      localStorage.setItem('token', userId)
       message.success('登录成功')
       setTimeout(function () {
         window.location.href = "http://localhost:3000/index"

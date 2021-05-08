@@ -23,9 +23,14 @@ class Guide extends Component {
         }
 
         if (token && iden) {
-            if (!(window.location.pathname === '/index'))
-                window.location.replace('/index')
-            return
+            if (iden === 'student') {
+                if (!(window.location.pathname === '/index'))
+                    window.location.replace('/index')
+                return
+            }
+            if (iden === 'teacher') {
+                console.log(iden)
+            }
         }
     }
     ChangeData = (value) => {

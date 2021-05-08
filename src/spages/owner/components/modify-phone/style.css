@@ -1,0 +1,45 @@
+.modify-phone-page {
+  min-height: 100vh;
+}
+
+.mpg-title {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: 800;
+  padding-left: 15px;
+  padding-bottom: 12px;
+  border-bottom: 19px solid;
+  border-bottom-color: #ededed;
+}
+
+.mpg-phone-title {
+  color: #0f0fef;
+  font-size: 16px;
+  padding-left: 8px;
+}
+
+.btn-modify-phone-box {
+  background: #ededed;
+  min-height: 80vh;
+  padding-top: 40px;
+}
+
+.btn-modify-phone {
+  text-align: center;
+  background: #00b8ff;
+  line-height: 58px;
+  margin: 0px 15px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.modify-phone {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  height: 60px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #2F3742;
+}

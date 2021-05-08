@@ -10,7 +10,6 @@ class Details extends Component {
         }
     }
     componentDidMount() {
-        checklogin()
     }
     render() {
         return (

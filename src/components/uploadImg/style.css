@@ -1,5 +1,35 @@
-.inloadImg {
-  width: 100px;
-  height: 100px;
-  object-fit: fill;
+.uploadThumb {
+  background: url(../../imgs/bg/bgupload.jpg);
+  min-height: 100vh;
+}
+
+.join-head {
+  margin: 0 auto;
+  color: black;
+  text-align: center;
+  line-height: 48px;
+  border: 1px solid aquamarine;
+  cursor: pointer;
+}
+
+.am-image-picker-list .am-image-picker-item .am-image-picker-item-content {
+  background-size: cover;
+  background: no-repeat;
+}
+
+.am-image-picker-list .am-image-picker-item .am-image-picker-item-remove {
+  width: 40px !important;
+  height: 40px !important;
+  background-size: cover !important;
+  background: no-repeat;
+}
+
+.btn-upload {
+  line-height: 70px;
+  font-size: 22px;
+  color: #ffd4dd;
+  border-radius: 70px;
+  background: #659442;
+  text-align: center;
+  margin: 0 auto;
 }

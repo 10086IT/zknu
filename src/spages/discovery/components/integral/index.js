@@ -12,7 +12,7 @@ class Integral extends Component {
             <div className="integral-lists">
                 {lists_jobs.map((item, index) => {
                     return (
-                        <div className="item-integral" key="item">
+                        <div className="item-integral" key={item}>
                             <div className="integral-left">
                                 <div className="integral-at">{index + 1}</div>
                                 <div className="integral-box-msg">
