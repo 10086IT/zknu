@@ -8,7 +8,6 @@ import MyRouter from './router';
 ReactDOM.render(
   <React.StrictMode>
     <MyRouter />
-
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -52,7 +52,7 @@ export default class UploadThumb extends PureComponent {
         const { isSuccess, imgUrl } = res.data
         if (isSuccess) {
           setTimeout(function () {
-            window.location.href = 'http://localhost:3000/owner'
+            window.location.href = 'http://localhost:3000/student/owner'
           }, 1000)
           localStorage.setItem('imgUrl', imgUrl)
           message.success('头像上传成功')

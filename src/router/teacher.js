@@ -1,15 +1,18 @@
 import React from 'react';
 import { Route } from "react-router-dom";
-import Home from '../teacher-pages/home'
-export default class LoginedRouter extends React.Component {
-  componentDidMount() {
+import { Fragment } from 'react';
+import { checkTeacherLogin } from './utils';
+import TeacherIndex from '../teacher-pages';
 
+
+export default class TeachersRouter extends React.Component {
+  componentDidMount() {
+    checkTeacherLogin()
   }
   render() {
     return (
       <Fragment>
-        <Route exact path="/tindex" component={Home}></Route>
-
+        <Route exact path="/teacher/index" component={TeacherIndex}></Route>
       </Fragment>
     )
 

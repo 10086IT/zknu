@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TabBar from '../../components/tabbar';
+import TabBar from '../components/tabbar';
 //系统通知
 
 class Msg extends Component {

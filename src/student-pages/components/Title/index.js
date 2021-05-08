@@ -6,13 +6,15 @@ class Title extends Component {
     this.state = { title: '' }
   }
   goLastPage = () => {
+
+    //url跳转上一页
     const { url } = this.props
     if (url) {
       localStorage.removeItem('iden')
       window.location.href = url
       return
     }
-    window.history.go(-1)
+    window.history.back(-1)
   }
   render() {
     const { title, isShowBack = false } = this.props

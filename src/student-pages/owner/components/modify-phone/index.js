@@ -30,7 +30,7 @@ class ModifyPhone extends React.Component {
       const { isSuccess, msg } = res
       if (isSuccess) {
         setTimeout(function () {
-          window.location.href = "http://localhost:3000/owner"
+          window.location.href = "http://localhost:3000/student/owner"
         }, 1000)
         message.success(msg)
       }

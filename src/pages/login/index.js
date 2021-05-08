@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import Title from '../../components/Title';
+import Title from '../../student-pages/components/Title';
 import './style.css'
 import { message } from 'antd'
 import { login } from '../../net/api'
@@ -47,7 +47,7 @@ class Login extends Component {
       localStorage.setItem('token', userId)
       message.success('登录成功')
       setTimeout(function () {
-        window.location.href = "http://localhost:3000/index"
+        window.location.href = `http://localhost:3000/${iden}/index`
       }, 1000)
     }
     ).catch((e) => {

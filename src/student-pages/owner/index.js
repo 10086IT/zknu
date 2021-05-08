@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TabBar from '../../components/tabbar';
+import TabBar from '../components/tabbar';
 import './style.css'
 import { ownerMsg } from '../../net/api'
 import { message } from 'antd';
@@ -39,10 +39,11 @@ class Owner extends Component {
     })
   }
   modifyImgheader = () => {
-    window.location.href = "http://localhost:3000/uploadImg"
+    window.location.href = "http://localhost:3000/student/uploadImg"
   }
   toPagePhone = () => {
-    window.location.href = 'http://localhost:3000/modifyphone'
+
+    window.location.href = 'http://localhost:3000/student/modifyphone'
   }
   render() {
     const { name, account, phone, sex, birth, imgUrl } = this.state

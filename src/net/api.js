@@ -18,61 +18,37 @@ export const login = ({ account, pwd, iden }) => post({
 export const ownerMsg = ({ }) => post({
   url: `${tp}/user?`,
 })
-/*
-检查登录
-*/
 
-export const checkStudentLogin = () => {
-  let iden = localStorage.getItem('iden')
-  let token = localStorage.getItem('token')
-  if (iden !== 'student') {
-    window.location.replace('/')
-    return
-  }
-  if (!iden || !token) {
-    localStorage.removeItem('token')
-    localStorage.removeItem('iden')
-    window.location.replace('/')
-    return
-  }
-}
-export const checkAdminLogin = () => {
-  let iden = localStorage.getItem('iden')
-  let token = localStorage.getItem('token')
-  if (iden !== 'admin') {
-    window.location.replace('/')
-    return
-  }
-  if (!iden || !token) {
-    localStorage.removeItem('token')
-    localStorage.removeItem('iden')
-    window.location.replace('/')
-    return
-  }
-}
-export const checkTeacherLogin = () => {
-  let iden = localStorage.getItem('iden')
-  let token = localStorage.getItem('token')
-  if (iden !== 'teacher') {
-    window.location.replace('/')
-    return
-  }
-  if (!iden || !token) {
-    localStorage.removeItem('token')
-    localStorage.removeItem('iden')
-    window.location.replace('/')
-    return
-  }
-}
+/*
+头像
+*/
 export const uploadfile = ({ imgUrl }) => post({
   url: `${tp}/upload?`,
   data: {
     imgUrl
   }
 })
+/*
+学生手机号
+*/
 export const modifyPhone = ({ phone }) => post({
   url: `${tp}/modifyPhone?`,
   data: {
     phone
+  }
+})
+/*
+学生兼职信息
+*/
+export const getJobsMsg = ({ count }) => post({
+  url: `${tp}?`,
+  data: {
+    count
+  }
+})
+export const searchJobs = ({ data }) => post({
+  url: `${tp}/searchJobs?`,
+  data: {
+    data
   }
 })

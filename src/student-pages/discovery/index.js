@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import TabBar from '../../components/tabbar';
+import TabBar from '../components/tabbar';
 import Integral from './components/integral'
 
 //学生兼职任务详情

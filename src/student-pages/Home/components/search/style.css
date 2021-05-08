@@ -1,0 +1,36 @@
+.search-data-page {
+  min-height: 100vh;
+  padding-bottom: 20vh;
+}
+
+.input-search {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.adjust-input {
+  padding-left: 10px;
+  font-size: 20px;
+  line-height: 22px;
+  width: 70vw;
+  margin-left: 20px;
+  height: 60px;
+  border: 1px soild #ccc;
+  outline: none;
+}
+
+.tosearch {
+  margin-left: 10px;
+  width: 60px;
+  height: 60px;
+  background: url(../../../../imgs/bg/icon-search.png) no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.adjust-input::placeholder {
+  color: black;
+  font-size: 22px;
+}

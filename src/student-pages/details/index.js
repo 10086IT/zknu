@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Title from '../../components/Title'
+import Title from '../components/Title'
 import { checklogin } from '../../net/api'
 import './style.css'
 class Details extends Component {

@@ -1,3 +1,7 @@
+.home {
+    padding-bottom: 20vh;
+}
+
 .home-header {
     display: flex;
     justify-content: space-between;
@@ -12,6 +16,7 @@
     width: 60px;
     height: 60px;
     background: url(../../imgs/base/select.png) no-repeat center/32px;
+    cursor: pointer;
 }
 
 .lists {
@@ -23,8 +28,7 @@
 .item-left {
     width: 60px;
     height: 60px;
-    background: url(../../imgs/base/head1.png) no-repeat;
-    background-size: cover;
+    background-size: cover !important;
     border-radius: 3px;
 }
 
@@ -55,4 +59,16 @@
 
 .item-name {
     font-size: 16px;
+}
+
+.jobs-more {
+    line-height: 49px;
+    color: blue;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid;
+    border-color: blue;
+    border-radius: 13px;
+    margin: 10px;
+    cursor: pointer;
 }
