@@ -46,9 +46,25 @@ export const getJobsMsg = ({ count }) => post({
     count
   }
 })
+/*
+兼职信息查询
+*/
 export const searchJobs = ({ data }) => post({
   url: `${tp}/searchJobs?`,
   data: {
     data
   }
+})
+
+/*
+兼职
+*/
+export const joinJobs = ({ jobId }) => post({
+  url: `${tp}/joinJobs?`,
+  data: {
+    jobId
+  }
+})
+export const currentJobs = ({ }) => post({
+  url: `${tp}/currentJobs?`
 })

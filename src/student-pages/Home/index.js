@@ -48,8 +48,13 @@ class Home extends Component {
   search = () => {
     window.location.href = 'http://localhost:3000/student/search'
   }
-  detailPage = (item, e) => {
-    console.log()
+  detailPage = (name, imgURl, item, e) => {
+    console.log(name, imgURl, item)
+    localStorage.setItem('name', name)
+    localStorage.setItem('teacherImgUrl', imgURl)
+    localStorage.setItem('item', JSON.stringify(item))
+    window.location.href = "http://localhost:3000/student/details"
+    return
   }
   render() {
 
@@ -66,12 +71,13 @@ class Home extends Component {
             jobs_lists.map((item, index) => {
               const { account, id, now_nums, nums, phone, title } = item
               const imgURl = teacherName[index]['headpic']
+              const name = teacherName[index]['name']
               return (
-                <div className="lists" key={index} onClick={this.detailPage.bind(this, item)}>
+                <div className="lists" key={index} onClick={this.detailPage.bind(this, name, imgURl, item)}>
                   <div className="item-left" style={{ background: `url(${imgURl})` }}></div>
                   <div className="item-right-box"><div className="item-job">{title}</div>
                     <div className="item-right">
-                      <div className="item-name">{teacherName[index]['name']}</div>
+                      <div className="item-name">{name}</div>
                       <div className="item-nums">招募人数{nums - now_nums}人</div>
                     </div>
                   </div>

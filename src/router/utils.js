@@ -33,14 +33,14 @@ export const checkAdminLogin = () => {
 export const checkTeacherLogin = () => {
   let iden = localStorage.getItem('iden')
   let token = localStorage.getItem('token')
-  // if (iden !== 'teacher') {
-  //   window.location.replace('/')
-  //   return
-  // }
-  // if (!iden || !token) {
-  //   localStorage.removeItem('token')
-  //   localStorage.removeItem('iden')
-  //   window.location.replace('/')
-  //   return
-  // }
+  if (iden !== 'teacher') {
+    window.location.replace('/')
+    return
+  }
+  if (!iden || !token) {
+    localStorage.removeItem('token')
+    localStorage.removeItem('iden')
+    window.location.replace('/')
+    return
+  }
 }

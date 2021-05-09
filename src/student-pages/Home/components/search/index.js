@@ -55,6 +55,14 @@ class SearchData extends React.Component {
       console.log(e)
     })
   }
+  detailPage = (name, imgURl, item, e) => {
+    console.log(name, imgURl, item)
+    localStorage.setItem('name', name)
+    localStorage.setItem('teacherImgUrl', imgURl)
+    localStorage.setItem('item', JSON.stringify(item))
+    window.location.href = "http://localhost:3000/student/details"
+    return
+  }
   render() {
     const { data, jobs_lists, teacherName } = this.state
     return (
@@ -75,8 +83,9 @@ class SearchData extends React.Component {
             jobs_lists.map((item, index) => {
               const { account, id, now_nums, nums, phone, title } = item
               const imgURl = teacherName[index]['headpic']
+              const name = teacherName[index]['name']
               return (
-                <div className="lists" key={index} >
+                <div className="lists" key={index} onClick={this.detailPage.bind(this, name, imgURl, item)} >
                   <div className="item-left" style={{ background: `url(${imgURl})` }}></div>
                   <div className="item-right-box"><div className="item-job">{title}</div>
                     <div className="item-right">

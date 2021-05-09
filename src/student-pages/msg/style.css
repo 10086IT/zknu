@@ -1,0 +1,45 @@
+.msg-page {
+  min-height: 100vh;
+}
+
+.msg-container {
+  padding: 10px;
+}
+
+.msg-bar {
+  margin-top: 12px;
+  font-weight: 800;
+  background: #ccc;
+}
+
+.current-bar-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.current-jobs-txt {
+  font-size: 19px;
+  margin-left: 10px;
+  color: rgb(255 207 0);
+}
+
+.current-bar-icon {
+  width: 30px;
+  height: 30px;
+  background: url(../../imgs/base/head2.png) no-repeat;
+  background-size: cover;
+}
+
+.bar-box {
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+
+.bar-box-about {
+  font-size: 16px;
+  line-height: 40px;
+  color: #ccc;
+}

@@ -37,6 +37,7 @@ const request = (method = 'get') => ({
             else {
                 return resData
             }
+
         }
     }
     ).catch((e) => {
