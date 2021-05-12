@@ -40,6 +40,8 @@ export default class Msg extends React.Component {
   }
   render() {
     const { progress, pageState, teacherMsg, jobsDetail } = this.state
+    const { title, linkman, now_nums, nums, replyprogress } = jobsDetail
+
     return (
       <div className="msg-page">
         {
@@ -51,12 +53,13 @@ export default class Msg extends React.Component {
             <div className="msg-container">
               <h2 className="msg-bar">当前任务</h2>
               {
+                replyprogress === 0 &&
                 <div className="current-bar-icon-box" onClick={this.pageStateTab}>
                   <div className="bar-box">
                     <div className="current-bar-icon"></div>
-                    <div className="current-jobs-txt">图书管理员</div>
+                    <div className="current-jobs-txt">{title}</div>
                   </div>
-                  <div className="bar-box-about">{progress}&gt;</div>
+                  <div className="bar-box-about">{replyprogress === 0 ? progress : ''}&gt;</div>
                 </div>
               }
 

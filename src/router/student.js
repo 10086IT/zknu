@@ -7,6 +7,7 @@ import Details from '../student-pages/details';
 import Discovery from '../student-pages/discovery'
 import { Fragment } from 'react';
 import UploadThumb from '../student-pages/components/uploadImg'
+import LoadImg from '../student-pages/owner/components/load-img'
 import ModifyPhone from '../student-pages/owner/components/modify-phone';
 import { checkStudentLogin } from './utils';
 import SearchData from '../student-pages/Home/components/search';
@@ -25,6 +26,7 @@ export default class StudentsRouter extends React.Component {
         <Route exact path="/student/msg" component={Msg}></Route>
         <Route exact path="/student/uploadImg" component={UploadThumb}></Route>
         <Route exact path="/student/owner" component={Owner}></Route>
+        <Route exact path="/student/owner/loadImg" component={LoadImg}></Route>
         <Route exact path="/student/modifyphone" component={ModifyPhone}></Route>
       </Fragment>
     )

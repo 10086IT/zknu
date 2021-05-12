@@ -18,7 +18,6 @@ const request = (method = 'get') => ({
         url,
         data,
         method,
-        withCredentials: true,
         headers: {
             token: localStorage.getItem('token')
         }
